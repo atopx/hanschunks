@@ -3,7 +3,8 @@ name: CI
 on:
   push:
     tags:
-      - '*'
+      - "*"
+  pull_request:
   workflow_dispatch:
 
 permissions:

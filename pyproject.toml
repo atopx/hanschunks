@@ -7,10 +7,6 @@ name = "hanschunks"
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "extractous>=0.3.0",
-    "maturin>=1.8.6,<2.0",
-]
 license = { text = "MIT" }
 authors = [{ name = "atopx", email = "3940422@qq.com" }]
 description = "High-performance Chinese document extractor + semantic chunker"
@@ -19,6 +15,11 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+]
+
+[dependency-groups]
+dev = [
+    "extractous>=0.3.0",
 ]
 
 [[tool.uv.index]]

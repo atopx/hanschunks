@@ -1,0 +1,11 @@
+/target
+.venv
+.env
+.DS_Store
+.idea
+.cursor
+.vscode
+.lingma
+samples/
+dist/
+*.abi3.so

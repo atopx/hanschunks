@@ -20,6 +20,7 @@ classifiers = [
 [dependency-groups]
 dev = [
     "extractous>=0.3.0",
+    "maturin>=1.8.6",
 ]
 
 [[tool.uv.index]]

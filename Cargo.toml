@@ -11,8 +11,17 @@ doc = false
 [dependencies]
 jieba-rs = "0.7.2"
 thiserror = "2.0.12"
-pyo3 = { version = "0.25.0", features = ["abi3", "abi3-py312"] }
 regex = "1.11.1"
+
+# 在非 Windows 平台下的 pyo3 配置
+[target.'cfg(not(target_os = "windows"))'.dependencies.pyo3]
+version = "0.25.0"
+features = ["abi3", "abi3-py312"]
+
+# 在 Windows 平台下的 pyo3 配置
+[target.'cfg(target_os = "windows")'.dependencies.pyo3]
+version = "0.25.0"
+features = ["abi3", "abi3-py312", "generate-import-lib"]
 
 [profile.dev]
 incremental = true
